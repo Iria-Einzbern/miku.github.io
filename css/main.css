@@ -128,7 +128,7 @@
                     }
                 }
                 .log-out{
-                    transform: translateX(50%);
+                    position: relative;
                     width: calc(60px + 30%);
                     height: calc(2px + 3vw);
 
