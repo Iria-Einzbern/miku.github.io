@@ -36,7 +36,7 @@ body{
     position: fixed;
     right: 1%;
     top: 1%;
-    width: calc(100px + 10%);
+    width: calc(120px + 10%);
     transition: 0.3s ease;
 }
 .tip{
@@ -57,12 +57,13 @@ body{
     .tip span{
         flex:1;
         text-align: center;
+        padding-right: calc(8px + 5%);
     }
 
 
 
 .errorTip{
-    background-color: rgb(255, 125, 125);
+    background-color: rgb(255, 140, 140);
     color: rgb(196, 0, 0);
 }
 .okTip{

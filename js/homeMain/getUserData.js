@@ -1,12 +1,12 @@
-const { json } = require("body-parser");
+let userDataDiv = document.querySelector('.aboutme-main');
 
-let userDataDiv = document.querySelector('.user-data');
-
-let uFollow = userDataDiv.querySelector('#follow');
-let uFans = userDataDiv.querySelector('#fans');
-let uPosts = userDataDiv.querySelector('#posts');
+let uName = userDataDiv.querySelector('.user-name');
+let uFollow = userDataDiv.querySelector('#follow .data-text');
+let uFans = userDataDiv.querySelector('#fans .data-text');
+let uPosts = userDataDiv.querySelector('#posts .data-text');
 
 let miUID = getCookie("miUID");
+console.log(miUID);
 //通过获取cookie中的uid向后台获取数据
 function getUserData(miUID){
     uid={
@@ -22,9 +22,26 @@ function getUserData(miUID){
     .then((res)=>{
         if (!res.ok) {
             // HTTP 错误状态码会在这里处理
-            errTips("发生未知错误")
+            showTip("发生未知错误",'err');
             throw new Error(`HTTP错误! 状态码: ${res.status}`);
         }
         return res.json();
     })
+    .then((uData)=>{
+        console.log(uData);
+        loadUserData(uData);
+    })
+    .catch((err)=>{
+        console.log(err);
+        showTip(err,"err");
+    })
+}
+
+getUserData(miUID);
+
+function loadUserData(data){
+    uName.textContent=data.uName;
+    uFollow.textContent=data.uFollow;
+    uFans.textContent=data.uFans;
+    uPosts.textContent=data.uPosts;
 }
