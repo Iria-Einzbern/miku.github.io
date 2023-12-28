@@ -4,6 +4,7 @@ let uName = userDataDiv.querySelector('.user-name');
 let uFollow = userDataDiv.querySelector('#follow .data-text');
 let uFans = userDataDiv.querySelector('#fans .data-text');
 let uPosts = userDataDiv.querySelector('#posts .data-text');
+let uSign = userDataDiv.querySelector('.user-signature');
 
 let miUID = getCookie("miUID");
 console.log(miUID);
@@ -44,4 +45,5 @@ function loadUserData(data){
     uFollow.textContent=data.uFollow;
     uFans.textContent=data.uFans;
     uPosts.textContent=data.uPosts;
+    showTip("用户数据加载成功");
 }
