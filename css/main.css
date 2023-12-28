@@ -89,6 +89,7 @@
                             font-size: calc(3.2px + 0.6vw);
                             color: var(--font);
                             font-style: italic;
+                            height: calc(3.2px + 0.6vw);
                         }
 
                 }
@@ -157,7 +158,7 @@
                 
             
     .home-main{
-        margin-top: calc(25px + 5%);
+        margin-top: calc(25px + 5vh);
         min-height: 500px;
         height: 50vw;
         display: grid;
@@ -170,4 +171,15 @@
             box-shadow: 1.5px 1.5px 3px 0.5px var(--shadow);
             background-color: var(--side-background-color);
             border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            .video-cover{
+                flex:1;
+                background-color: var(--shadow);
+            }
+            .video-info{
+                height: calc(8px + 20%);
+
+            }
         }

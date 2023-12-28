@@ -46,7 +46,7 @@ function loadUserData(data){
     uFollow.textContent=data.uFollow;
     uFans.textContent=data.uFans;
     uPosts.textContent=data.uPosts;
-    uSign.textContent=data.uSign;
+    uSign.textContent="——"+data.uSign;
     uAvatar.src=data.uAvatar;
     showTip("用户数据加载成功");
 }
