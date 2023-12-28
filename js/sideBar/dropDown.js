@@ -1,3 +1,11 @@
+/*
+ * @Author: kawaii-poi iria1314@qq.com
+ * @Date: 2023-12-25 20:11:29
+ * @LastEditors: kawaii-poi iria1314@qq.com
+ * @LastEditTime: 2023-12-28 10:20:37
+ * @FilePath: /Miku/js/sideBar/dropDown.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 var allSubSideMenu = document.querySelectorAll('.containDM');
 
 //给侧边栏挂载下拉菜单
@@ -19,16 +27,16 @@ allSubSideMenu.forEach(subMenu => {
                 //每次点击刷新子菜单高度和标题高度
                 textHeight=subMenu.querySelector('.subSideMenuDiv').offsetHeight;
                 dropHeight=subMenu.querySelector('.dropMenu').offsetHeight;
-                var clickedElement = event.target.closest('.subSideMenuDiv');
+                var clickedElement = event.target.closest('.dropDownMenuButton');
 
                 
                 // 如果点击的是标题区域，执行展开/关闭操作
-                if (clickedElement==subMenu.querySelector('.subSideMenuDiv')) {
+                if (clickedElement==subMenu.querySelector('.dropDownMenuButton')) {
                     closeOtherMenus(subMenu,textHeight);
                     subMenu.classList.toggle('dropDownOn')
                     dropDownMenuButton.classList.toggle('overturn')
                     // 获取父元素
-                    var parentElement = clickedElement.parentNode.parentNode;
+                    var parentElement = clickedElement.parentNode.parentNode.parentNode;
                     var isopen=subMenu.getAttribute('isopen')
                     if(isopen=='false'){
                         parentElement.style.height=dropHeight+textHeight+"px"

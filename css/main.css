@@ -3,6 +3,7 @@
     flex:1;
     margin: 20px;
     padding: 5px;
+    justify-content: center;
 }
 
 .home{
@@ -10,12 +11,14 @@
     margin-top: 15px;
     height: 100%;
     width: 100%;
+    max-width: 1600px;
+    min-width: 800px;
     display: flex;
     flex-direction: column;
 }
 
     .home-header{
-        height: 50vh;
+        height: 30vw;
         display: grid;
         grid-template-columns: 3fr 1.3fr;
         grid-gap: calc(12px + 0.5%);
@@ -77,12 +80,13 @@
                                 color: var(--main-color);
                                 font-size: calc(5px + 1.6vw);
                                 margin-right: calc(3px+0.5vw);
+                                transition: 0.3s ease;
                             }
                             
                         }
                         .user-signature{
                             margin-top: calc(10px + 5%);
-                            font-size: calc(3.5px + 0.6vw);
+                            font-size: calc(3.2px + 0.6vw);
                             color: var(--font);
                             font-style: italic;
                         }
@@ -90,8 +94,8 @@
                 }
                 .user-data{
                     user-select: none;
-                    margin-top: 0.6vw;
-                    margin-bottom: 0.6vw;
+                    margin-top: 1vw;
+                    margin-bottom: 1vw;
                     width: 100%;
                     height: calc(20px + 12%);
                     border-radius: 8px;
@@ -102,7 +106,7 @@
                         flex-direction: column;
                         align-items: center;
                         .data-title{
-                            font-size: calc(5px + 1.2vw);
+                            font-size: calc(10px + 0.5vw);
                             color: var(--font);
                         }
                         .data-text{
@@ -113,11 +117,11 @@
                     }
                 }
                 .user-personal-center{
-                    margin-bottom: 1vw;
+                    height: 50%;
+                    margin-bottom: calc(5px + 5%);
                     padding-left: 5%;
                     padding-right: 5%;
                     width: 100%;
-                    flex:1;
                     border-bottom: solid 0.5px var(--font);
                     color: var(--font);
                     font-size: 1.2vw;
@@ -125,6 +129,7 @@
                     align-items: center;
                     span{
                         flex:1;
+                        margin-bottom: 5%;
                     }
                 }
                 .log-out{
@@ -139,6 +144,8 @@
                     align-items: center;
                     justify-content: center;
                     transition: 0.3s ease;
+                    font-size: 1.2vw;
+                    user-select: none;
                 }
                 .log-out:hover{
                     background-color: var(--warn);
@@ -148,11 +155,12 @@
             
 
     .home-main{
-        margin-top: calc(50px + 1vh);
-        height: 60vw;
+        margin-top: calc(25px + 5%);
+        min-height: 500px;
+        height: 50vw;
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
         grid-gap: calc(15px + 2%);
     }
         .home-subDiv{
