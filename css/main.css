@@ -67,6 +67,7 @@
                                 box-shadow: 2px 2px 5px 0px var(--shadow);
                                 border-radius: 100px;
                                 overflow: hidden;
+                                background-color: var(--side-background-color);
                                 img{
                                     max-width: 100%;
                                 }
