@@ -38,7 +38,6 @@
             flex-direction: column;
             align-items: center;
             padding: calc(10px + 1vw);
-        }
             .aboutme-main{
                 display: flex;
                 flex-direction: column;
@@ -127,6 +126,7 @@
                     font-size: 1.2vw;
                     display: flex;
                     align-items: center;
+                    user-select: none;
                     span{
                         flex:1;
                         margin-bottom: 5%;
@@ -151,9 +151,10 @@
                     background-color: var(--warn);
                     color: var(--font-hover); 
                 }
+        }
+            
                 
             
-
     .home-main{
         margin-top: calc(25px + 5%);
         min-height: 500px;
