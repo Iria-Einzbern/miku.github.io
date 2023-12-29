@@ -2,7 +2,7 @@
  * @Author: kawaii-poi iria1314@qq.com
  * @Date: 2023-12-28 15:44:43
  * @LastEditors: kawaii-poi iria1314@qq.com
- * @LastEditTime: 2023-12-28 18:58:44
+ * @LastEditTime: 2023-12-29 16:45:59
  * @FilePath: /Miku/js/homeMain/main.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -40,8 +40,9 @@ function showTip(tipText,method){
     //闭包调用延迟函数
     setTimeout(function () {
         tip.classList.add('hidden','tipMove');
+        tip.style.height="0px"
         setTimeout(()=>{
             tips.removeChild(tip);
-        },300)
+        },600)
     }, 3000); // 3000 毫秒（3 秒）后移除，可以根据需要调整时间
 }
