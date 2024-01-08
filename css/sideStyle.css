@@ -76,6 +76,7 @@ body{
 }
 
 .sideBar{
+    z-index: 100;
     position: fixed;
     padding: 20px;
     width: 250px;
