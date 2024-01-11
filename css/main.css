@@ -30,7 +30,7 @@
         border-radius: 8px;
     }
         .home-header-scroll{
-
+            color: var(--font);
         }
         .home-header-aboutme{
             display: flex;
@@ -78,7 +78,7 @@
                                 text-align: center;
                                 color: var(--main-color);
                                 font-size: calc(5px + 1.6vw);
-                                margin-right: calc(3px+0.5vw);
+                                margin-right: calc(3px + 0.5vw);
                                 transition: 0.3s ease;
                             }
                             
@@ -160,7 +160,6 @@
         flex-wrap: wrap;
         margin-top: calc(1vh);
         min-height: 500px;
-        height: 55vw;
         display: flex;
         justify-content: space-between;
     }
@@ -203,3 +202,26 @@
                 color:var(--main-color);
             }
         }
+.loading{
+    margin-top: calc(10px + 1vh);
+    height: calc(2vh + 1vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--font);
+    font-size: calc(15px + 1vh);
+}
+.loading i{
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading 
+{
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+
+.noBlock{
+    display: none;
+}
