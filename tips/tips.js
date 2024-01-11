@@ -2,7 +2,7 @@
  * @Author: kawaii-poi iria1314@qq.com
  * @Date: 2023-12-28 15:44:43
  * @LastEditors: kawaii-poi iria1314@qq.com
- * @LastEditTime: 2024-01-09 19:05:35
+ * @LastEditTime: 2024-01-11 15:25:36
  * @FilePath: /Miku/js/homeMain/main.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -78,6 +78,3 @@ function showTip(tipText,method){
     })
 }
 
-setTimeout(()=>{
-    showTip(1)
-},400)

@@ -157,15 +157,17 @@
                 
             
     .home-main{
-        margin-top: calc(20px + 5vh);
+        flex-wrap: wrap;
+        margin-top: calc(1vh);
         min-height: 500px;
         height: 55vw;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(3,1fr);
-        grid-gap: calc(15px + 2%);
+        display: flex;
+        justify-content: space-between;
     }
         .home-subDiv{
+            margin-top: calc(20px + 5vh);
+            width: 30%;
+            height: 15vw;
             transition: 0.3s ease;
             box-shadow: 1.5px 1.5px 3px 0.5px var(--shadow);
             background-color: var(--side-background-color);

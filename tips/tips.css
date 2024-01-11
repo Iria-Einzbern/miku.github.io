@@ -54,3 +54,6 @@
 .tipHidden{
     opacity: 0;
 }
+.tipMove{
+    transform: translateX(100%);
+}
