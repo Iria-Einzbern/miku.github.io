@@ -2,7 +2,7 @@
  * @Author: kawaii-poi iria1314@qq.com
  * @Date: 2023-12-27 15:53:13
  * @LastEditors: kawaii-poi iria1314@qq.com
- * @LastEditTime: 2024-01-11 20:57:30
+ * @LastEditTime: 2024-01-11 21:25:28
  * @FilePath: /Miku/js/homeMain/lazyLoad.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -26,8 +26,15 @@ function createHSubDiv(num){
     for(let i=0;i<num;i++){
         //新创建一个div元素，并添加类名
         let homeSubDiv = document.createElement("div")
-        homeSubDiv.classList.add('home-subDiv')
+        let videoCover = document.createElement("div")
+        videoCover.classList.add('video-cover')
+        let videoTitle = document.createElement("div")
+        videoTitle.classList.add('video-title')
+
         
+        homeSubDiv.appendChild(videoCover)
+        homeSubDiv.appendChild(videoTitle)
+        homeSubDiv.classList.add('home-subDiv')
         //添加一个empty类名，以便填充视频数据
         homeSubDiv.classList.add('empty')
 
