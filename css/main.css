@@ -165,8 +165,8 @@
         justify-content: space-between;
     }
         .home-subDiv{
-            margin-top: calc(20px + 5vh);
-            width: 30%;
+            margin-top: calc(10px + 3vh);
+            width: 31%;
             height: 15vw;
             transition: 0.3s ease;
             box-shadow: 1.5px 1.5px 3px 0.5px var(--shadow);
