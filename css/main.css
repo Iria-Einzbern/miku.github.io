@@ -175,20 +175,24 @@
             display: flex;
             flex-direction: column;
             .video-cover{
+                position: relative;
                 z-index: 10;
-                
                 flex:1;
                 background-color: var(--shadow);
+                display: flex;
+                justify-content: center;
                 .video-data{
                     position: absolute;
-                    bottom: 0%;
+                    align-self: flex-end;
                     width: 100%;
-                    display: flex;
-                    padding-left: 2%;
-                    padding-right: 2%;
                 }
                     
             }
+            .video-cover img{
+                max-width: 100%; /* 确保图像不超出容器 */
+                max-height: 100%;
+            }
+
             .video-title{
                 height: calc(8px + 20%);
                 display: flex;
@@ -213,6 +217,15 @@
 }
 .loading i{
     animation: loading 1s infinite linear;
+}
+.loadFail{
+    margin-top: calc(10px + 1vh);
+    height: calc(2vh + 1vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--font);
+    font-size: calc(15px + 1vh);
 }
 
 @keyframes loading 

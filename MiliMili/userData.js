@@ -2,7 +2,7 @@
  * @Author: kawaii-poi iria1314@qq.com
  * @Date: 2023-12-28 14:34:14
  * @LastEditors: kawaii-poi iria1314@qq.com
- * @LastEditTime: 2024-01-09 18:39:20
+ * @LastEditTime: 2024-01-13 09:41:47
  * @FilePath: /MiliMili/userData.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -61,6 +61,32 @@ expressApp.post('/api/getUserData',jsonParser,async(req,res)=>{
         .catch(err=>{
             console.log(err);
         })
+    
+})
+
+expressApp.post('/api/getVideoData',jsonParser,(req,res)=>{
+    let num = 9
+    let uid = req.body.uid
+
+    let videoData = {
+        isEnough:true,//大于9则传回true，小于9则传回准确的数值
+        data:[]
+    }
+
+    for(let i=0;i<num;i++){
+        let data = {
+            cover:'https://pic.imgdb.cn/item/65a136ab871b83018ad67154.png',
+            title:'example',
+            viewCounts:Math.floor(Math.random() * 100) + 1,
+            duration:0,
+            uploader:uid
+        }
+        videoData.data.push(data)
+    }
+    //console.log(videoData)
+    
+    res.json(videoData)
+    
     
 })
 
